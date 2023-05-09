@@ -1,0 +1,47 @@
+<!-- 
+
+    Write a JavaScript program to get the current date.
+
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Date</title>
+ </head>
+
+ <body></body>
+
+ <script>
+
+    let today = new Date();
+    let dd = today.getDate();
+
+    let mm = today.getMonth()+1; 
+    const yyyy = today.getFullYear();
+    if(dd<10) {
+        dd=`0${dd}`;
+    } 
+
+    if(mm<10) {
+        mm=`0${mm}`;
+    } 
+
+    today = `${mm}-${dd}-${yyyy}`;
+    console.log(today);
+
+    today = `${mm}/${dd}/${yyyy}`;
+    console.log(today);
+
+    today = `${dd}-${mm}-${yyyy}`;
+    console.log(today);
+
+    today = `${dd}/${mm}/${yyyy}`;
+    console.log(today);
+
+ </script>
+
+ </html>
