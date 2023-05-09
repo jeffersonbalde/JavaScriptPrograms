@@ -1,0 +1,38 @@
+<!-- 
+
+    Write a JavaScript program to find the largest of three given integers.
+
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Largest Integers</title>
+ </head>
+
+ <body></body>
+
+<script>
+    const max_of_three = (x, y, z) => {
+        let max_int;
+
+        if(x > y) {
+            max_int = x
+        }else {
+            max_int = y
+        }
+
+        if(z > max_int) max_int = z
+
+        return max_int;
+    }
+
+    console.log(max_of_three(1,2,3));
+    console.log(max_of_three(20,50,100));
+    console.log(max_of_three(20,50,-100));
+</script>
+
+ </html>
