@@ -1,0 +1,55 @@
+<!-- 
+
+    Write a JavaScript program to calculate multiplication and division of two numbers (input from the user).
+
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Multiplication And Division</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        p {
+            text-align: center;
+        }
+    </style>
+ </head>
+
+ <body>
+    <form id="form">
+        <label for="firstNumber">First Number: </label>
+        <input type="text" id="firstNumber">
+        <label for="secondNumber">Second Number: </label>
+        <input type="text" id="secondNumber">
+        <button type="submit" onclick="multiply()">Multiply</button>
+        <button type="submit" onclick="divide()">Divide</button>
+    </form>
+    <p>Result: <span id="result"></span></p>
+ </body>
+
+ <script>
+    document.getElementById("form").addEventListener("click", (e) => {
+        e.preventDefault();
+    })
+    const multiply = () => {
+        const num1 = document.getElementById("firstNumber").value;
+        const num2 = document.getElementById("secondNumber").value;
+        document.getElementById("result").textContent = num1 * num2;
+    }
+
+    const divide = () => {
+        const num1 = document.getElementById("firstNumber").value;
+        const num2 = document.getElementById("secondNumber").value;
+        document.getElementById("result").textContent = num1 / num2;
+    }
+ </script>
+ </html>
