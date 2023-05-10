@@ -1,0 +1,106 @@
+<!-- 
+
+    a program that similar to atm machine allowing users to withdraw and deposit money
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atm Machine</title>
+    <style>
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 12em;
+        }
+
+        h1.title {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+            font-weight: 400;
+        }
+    
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+    
+        input[type=number] {
+            padding: 5px;
+            font-size: 16px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    
+        button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            margin-right: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #3e8e41;
+        }
+    
+        #message {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Jefferson Balde Prefinal Exerice</h1>
+    <div class="container">
+		<h1>ATM Machine</h1>
+		<label>Enter amount:</label>
+		<input type="number" id="amount" min="0">
+		<button id="deposit" onclick="deposit()">Deposit</button>
+		<button id="withdraw" onclick="withdraw()">Withdraw</button>
+		<div id="message"></div>
+	</div>
+    <script>
+        let balance = 0;
+
+        function deposit() {
+            const amount = parseInt(document.getElementById("amount").value);
+            if (isNaN(amount) || amount <= 0) {
+                document.getElementById("message").innerHTML = "Please enter a valid amount.";
+            }else {
+                balance += amount;
+                document.getElementById("message").innerHTML = "Deposit successful. New balance is P" + balance + ".";
+            }
+        }
+
+        function withdraw() {
+            const amount = parseInt(document.getElementById("amount").value);
+            if (isNaN(amount) || amount <= 0) {
+                document.getElementById("message").innerHTML = "Please enter a valid amount.";
+            }else if (amount > balance) {
+                document.getElementById("message").innerHTML = "Insufficient funds. Please try again.";
+            }else {
+                balance -= amount;
+                document.getElementById("message").innerHTML = "Withdrawal successful. New balance is P" + balance + ".";
+            }
+        }
+    </script>
+</body>
+</html>
