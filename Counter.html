@@ -19,6 +19,15 @@
 
 <script>
 
+    // Increment Then Return
+    var createCounter = function(n) {
+  let currentCount = n - 1;
+  return function() {
+    currentCount += 1;
+    return currentCount;      
+  };
+};
+
     // const createCounter = function(n) {
     //     return function() {
     //         return n++
