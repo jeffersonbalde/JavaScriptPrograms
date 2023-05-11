@@ -20,22 +20,32 @@
 <script>
 
     // Increment Then Return
-    var createCounter = function(n) {
-  let currentCount = n - 1;
-  return function() {
-    currentCount += 1;
-    return currentCount;      
-  };
-};
-
     // const createCounter = function(n) {
+    //     let currentCount = n - 1;
     //     return function() {
-    //         return n++
+    //         currentCount += 1;
+    //         return currentCount;      
     //     };
     // };
 
-    // const createCounter = (n) => {
-    //     return () => n++;
+    // Postfix Increment Syntax
+    // const createCounter = function(n) {
+    //     return function() {
+    //         return n++;    
+    //     }
+    // }
+
+    // Prefix Decrement and Increment Syntax
+    // const createCounter = function(n) {
+    //     --n;
+    //     return function() {
+    //         return ++n;
+    //     }
+    // }
+
+    // Postfix Increment Syntax With Arrow Function
+    // const createCounter = function(n) {
+    //     return () => n++
     // }
 
     const createCounter = n => () => n++;
