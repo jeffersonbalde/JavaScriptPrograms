@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text To Speech</title>
+    <style>
+        body {
+            text-align: center;
+            width: 100%;
+            margin: 0 auto;
+            background-color: #000000;  
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+            margin: 0 auto;
+        }
+
+        button {
+            background-color: #FF5F5A;
+            padding: .5em .7em;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: .2em;
+            margin-top: .6em;
+
+        }
+
+        textarea {
+            background-color: #000000;
+            color: white;
+            border-radius: .3em;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <div class="container">
+        <div>
+            <textarea spellcheck="false" ></textarea>
+        </div>
+        <div>
+            <button>Speak</button>
+        </div>
+    </div>
+</body>
+<script>
+    const button = document.querySelector("button");
+    const text = document.querySelector("textarea");
+
+    button.addEventListener('click', () => {
+        const utterance = new
+        SpeechSynthesisUtterance(text.value);
+        speechSynthesis.speak(utterance);
+    })
+</script>
+</html>
