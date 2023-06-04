@@ -1,0 +1,26 @@
+<!-- 
+
+    freeCodeCamp Task:
+    Check if a string (first argument, str) ends with the given target string (second argument, target).
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm the ending</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function confirmEnding(str, target) {
+        return str.slice(str.length - target.length) === target;
+    }
+
+    console.log(confirmEnding("He has to give me a new name", "name"));
+</script>
+</html>
