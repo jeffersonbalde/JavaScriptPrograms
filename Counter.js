@@ -1,23 +1,10 @@
-<!-- 
+/* 
 
     LeetCode Task:
     Given an integer n, return a counter function. This counter function initially returns n 
     and then returns 1 more than the previous value every subsequent time it is called (n, n + 1, n + 2, etc).
 
- -->
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Counter</title>
-</head>
-
-<body></body>
-
-<script>
+*/
 
     // Increment Then Return
     // const createCounter = function(n) {
@@ -48,13 +35,10 @@
     //     return () => n++
     // }
 
-    const createCounter = n => () => n++;
+const createCounter = n => () => n++;
 
-    const counter = createCounter(10)
+const counter = createCounter(10)
 
-    console.log(counter())
-    console.log(counter())
-    console.log(counter())
-
-</script>
-</html>
+console.log(counter())
+console.log(counter())
+console.log(counter())
